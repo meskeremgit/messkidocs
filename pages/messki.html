@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messki - messki Documentation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="../assets/apps.png" type="image/x-icon">
+  <link rel="stylesheet" href="../assets/styles.css">
+  
+</head>
+<body>
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">×</a>
+    <div class="sidebar-header">messki Docs</div>
+    <div class="sidebar-search">
+      <input type="text" placeholder="Search docs..." id="search-bar">
+    </div>
+    <a href="messki.html"><i class="fas fa-rocket fa-fw"></i> Messki</a>
+    <h3 onclick="toggleDropdown('appFeaturesDropdown')">
+      <i class="fas fa-cogs fa-fw"></i> App Features
+      <i class="fas fa-caret-down dropdown-indicator"></i>
+    </h3>
+    <div class="dropdown-container" id="appFeaturesDropdown">
+      <a href="messki-agent.html"><i class="fas fa-user-secret fa-fw"></i> Messki Agent</a>
+      <a href="ai-chat.html"><i class="fas fa-comments fa-fw"></i> AI Chat</a>
+      <a href="map.html"><i class="fas fa-map fa-fw"></i> Map</a>
+      <a href="location-sharing.html"><i class="fas fa-share-alt fa-fw"></i> Location Sharing</a>
+      <a href="keyword-search.html"><i class="fas fa-search fa-fw"></i> Keyword Search</a>
+    </div>
+    <h3 onclick="toggleDropdown('platformDropdown')">
+      <i class="fas fa-desktop fa-fw"></i> Platform
+      <i class="fas fa-caret-down dropdown-indicator"></i>
+    </h3>
+    <div class="dropdown-container" id="platformDropdown">
+      <a href="android.html"><i class="fab fa-android fa-fw"></i> Android</a>
+      <a href="ios.html"><i class="fab fa-apple fa-fw"></i> iOS</a>
+      <a href="web.html"><i class="fas fa-globe fa-fw"></i> Web</a>
+    </div>
+    <h3 onclick="toggleDropdown('faqDropdown')">
+      <i class="fas fa-question-circle fa-fw"></i> FAQ
+      <i class="fas fa-caret-down dropdown-indicator"></i>
+    </h3>
+    <div class="dropdown-container" id="faqDropdown">
+      <a href="how-to-download.html"><i class="fas fa-download fa-fw"></i> How to Download Messki</a>
+      <a href="how-to-register.html"><i class="fas fa-user-plus fa-fw"></i> How to Register My Service</a>
+      <a href="how-to-advertise.html"><i class="fas fa-bullhorn fa-fw"></i> How to Advertise</a>
+    </div>
+    <h3 onclick="toggleDropdown('privacyPolicyDropdown')">
+      <i class="fas fa-shield-alt fa-fw"></i> Privacy and Policy
+      <i class="fas fa-caret-down dropdown-indicator"></i>
+    </h3>
+    <div class="dropdown-container" id="privacyPolicyDropdown">
+      <a href="user-faq.html"><i class="fas fa-user fa-fw"></i> User</a>
+      <a href="service-provider-faq.html"><i class="fas fa-user-tie fa-fw"></i> Service Provider</a>
+    </div>
+    <hr>
+    <a href="contact.html"><i class="fas fa-envelope fa-fw"></i> Contact</a>
+  </div>
+
+  <div id="main">
+    <button class="openbtn" onclick="toggleNav()"></button>
+    <div class="header-actions">
+      <a href="../index.html" class="home-btn" aria-label="Go to Home">
+        <i class="fas fa-home"></i>
+      </a>
+      <button class="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+
+  <div id="main">
+    <button class="openbtn" onclick="toggleNav()"></button>
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h1><span class="highlight">Messki</span> Docs</h1>
+        </div>
+        <div class="header-actions">
+          <a href="../index.html" class="home-btn" aria-label="Go to Home">
+            <i class="fas fa-home"></i>
+          </a>
+          <button class="theme-toggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section id="main-content">
+      <div class="container">
+        <h2>Welcome to Messki</h2>
+        <img src="https://cdn-icons-png.flaticon.com/256/9473/9473007.png">
+        <p>
+          Messki is a platform designed to connect customers with service providers effortlessly. Whether you’re looking for a specific service or want to offer your expertise, Messki makes it simple and efficient.
+        </p>
+    
+        <h3>We Are Not a Middleman</h3>
+        <p>
+          At Messki, we believe in fostering direct and transparent connections between customers and service providers. Here's how we ensure a smooth and hassle-free experience for everyone involved:
+        </p>
+        <ul>
+          <li><strong>No Middleman Fees</strong> - You only pay what the service provider charges. No hidden costs or extra fees. Your money goes directly to the person providing the service.</li>
+          <li><strong>Direct Communication</strong> - 
+            <ul>
+              <li><strong>For Customers:</strong> Once you find the ideal service provider, you can contact them directly via call or text using the contact information provided on our platform.</li>
+              <li><strong>For Service Providers:</strong> You receive inquiries and booking requests directly from customers through your preferred contact methods, ensuring clear and open communication.</li>
+            </ul>
+          </li>
+          <li><strong>Flexible Payment Methods</strong> - Service providers have the flexibility to accept payments through various methods, including cash or deposit, based on their preference. This allows for a seamless transaction process tailored to individual needs.</li>
+          <li><strong>Empowered Customers</strong> - Customers have full control over the selection and communication with service providers. You can:
+            <ul>
+              <li>Browse through a comprehensive list of service providers.</li>
+              <li>Check their ratings, reviews, and profiles.</li>
+              <li>Choose the one that best fits your requirements and directly get in touch with them.</li>
+            </ul>
+          </li>
+          <li><strong>Independent Service Providers</strong> - Service providers have the autonomy to manage their own listings and bookings. You can:
+            <ul>
+              <li>List your services with detailed descriptions and pricing.</li>
+              <li>Update or remove listings as needed.</li>
+              <li>Accept bookings and payments directly from customers without any interference.</li>
+            </ul>
+          </li>
+          <li><strong>Transparent Feedback System</strong> - Our rating and review system ensures that both customers and service providers can share their experiences openly, promoting trust and quality within the community.</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <p>Copyright © 2025 messki, </p>
+    </footer>
+  </div>
+
+  <script src="../assets/scripts.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Open all dropdowns by default
+      document.querySelectorAll('.dropdown-container').forEach(container => {
+        container.classList.add('active');
+      });
+      // Ensure consistent dropdown states
+      setDropdownStates();
+    });
+  </script>
+</body>
+</html>

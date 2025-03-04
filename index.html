@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messki-docs</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/apps.png" type="image/x-icon">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">×</a>
+    <div class="sidebar-header">messki Docs</div>
+    <div class="sidebar-search">
+      <input type="text" placeholder="Search docs..." id="search-bar">
+    </div>
+    <a href="pages/messki.html"><i class="fas fa-rocket fa-fw"></i> Messki</a>
+    <h3 onclick="toggleDropdown('appFeaturesDropdown')">
+      <i class="fas fa-cogs fa-fw"></i> App Features
+      <i class="fas fa-caret-down dropdown-indicator"></i>
+    </h3>
+    <div class="dropdown-container active" id="appFeaturesDropdown">
+      <a href="pages/messki-agent.html"><i class="fas fa-user-secret fa-fw"></i> Messki Agent</a>
+      <a href="pages/ai-chat.html"><i class="fas fa-comments fa-fw"></i> AI Chat</a>
+      <a href="pages/map.html"><i class="fas fa-map fa-fw"></i> Map</a>
+      <a href="pages/location-sharing.html"><i class="fas fa-share-alt fa-fw"></i> Location Sharing</a>
+      <a href="pages/keyword-search.html"><i class="fas fa-search fa-fw"></i> Keyword Search</a>
+    </div>
+    <h3 onclick="toggleDropdown('platformDropdown')">
+      <i class="fas fa-desktop fa-fw"></i> Platform
+      <i class="fas fa-caret-down dropdown-indicator"></i>
+    </h3>
+    <div class="dropdown-container active" id="platformDropdown">
+      <a href="pages/android.html"><i class="fab fa-android fa-fw"></i> Android</a>
+      <a href="pages/ios.html"><i class="fab fa-apple fa-fw"></i> iOS</a>
+      <a href="pages/web.html"><i class="fas fa-globe fa-fw"></i> Web</a>
+    </div>
+    <h3 onclick="toggleDropdown('faqDropdown')">
+      <i class="fas fa-question-circle fa-fw"></i> FAQ
+      <i class="fas fa-caret-down dropdown-indicator"></i>
+    </h3>
+    <div class="dropdown-container active" id="faqDropdown">
+      <a href="pages/how-to-download.html"><i class="fas fa-download fa-fw"></i> How to Download Messki</a>
+      <a href="pages/how-to-register.html"><i class="fas fa-user-plus fa-fw"></i> How to Register My Service</a>
+      <a href="pages/how-to-advertise.html"><i class="fas fa-bullhorn fa-fw"></i> How to Advertise</a>
+    </div>
+    <h3 onclick="toggleDropdown('privacyPolicyDropdown')">
+      <i class="fas fa-shield-alt fa-fw"></i> Privacy and Policy
+      <i class="fas fa-caret-down dropdown-indicator"></i>
+    </h3>
+    <div class="dropdown-container active" id="privacyPolicyDropdown">
+      <a href="pages/user-faq.html"><i class="fas fa-user fa-fw"></i> User Privacy and Policy</a>
+      <a href="pages/service-provider-faq.html"><i class="fas fa-user-tie fa-fw"></i> Service Provider Privacy and Policy</a>
+    </div>
+    <hr>
+    <a href="pages/contact.html"><i class="fas fa-envelope fa-fw"></i> Contact</a>
+  </div>
+
+  <div id="main">
+    <button class="openbtn" onclick="toggleNav()"></button>
+    <div class="header-actions">
+      
+      <button class="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+
+  <div id="main">
+    <button class="openbtn" onclick="toggleNav()"></button>
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h1><span class="highlight">My</span> App</h1>
+        </div>
+        <div class="header-actions">
+          <a href="index.html" class="home-btn" aria-label="Go to Home">
+            <i class="fas fa-home"></i>
+          </a>
+          <button class="theme-toggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section id="main-content">
+      <div class="container">
+        <h2>Welcome messki Documentation!</h2>
+        <img src="https://cdn-icons-png.flaticon.com/256/9616/9616892.png" alt="Network Image" style="max-width: 100%; height: auto;">
+        <p>
+          This documentation provides detailed information about Messki. Use the sidebar on the left to navigate to different sections or search for specific topics.
+        </p>
+        <p>
+          Get started by exploring the App Features:
+        </p>
+        <ul>
+          <li><a href="pages/messki.html">Messki</a> - Overview of the Messki platform.</li>
+          <li><a href="pages/messki-agent.html">Messki Agent</a> - Intelligent assistant for your needs.</li>
+          <li><a href="pages/ai-chat.html">AI Chat</a> - Real-time conversation with AI.</li>
+          <li><a href="pages/map.html">Map</a> - Interactive maps for navigation.</li>
+          <li><a href="pages/location-sharing.html">Location Sharing</a> - Share your location easily.</li>
+          <li><a href="pages/keyword-search.html">Keyword Search</a> - Find what you need quickly.</li>
+          <li><a href="pages/android.html">Android</a> - Platform-specific information for Android.</li>
+          <li><a href="pages/ios.html">iOS</a> - Platform-specific information for iOS.</li>
+          <li><a href="pages/web.html">Web</a> - Platform-specific information for Web.</li>
+          <li><a href="pages/how-to-download.html">How to Download Messki</a> - Instructions for downloading Messki.</li>
+          <li><a href="pages/how-to-register.html">How to Register My Service</a> - Instructions for registering your service.</li>
+          <li><a href="pages/how-to-advertise.html">How to Advertise</a> - Instructions for advertising on Messki.</li>
+          <li><a href="pages/user-faq.html">User Privacy and Policy</a> - Privacy and policy information for users.</li>
+          <li><a href="pages/service-provider-faq.html">Service Provider Privacy and Policy</a> - Privacy and policy information for service providers.</li>
+          <li><a href="pages/contact.html">Contact</a> - Contact information.</li>
+        </ul>
+        </pre>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Copyright © 2025 messki</p>
+    </footer>
+  </div>
+
+  <script src="assets/scripts.js"></script>
+</body>
+</html>
