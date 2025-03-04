@@ -27,7 +27,12 @@ window.onload = () => {
   // Set dark mode state
   if (localStorage.getItem('darkMode') === 'true') {
     document.body.classList.add('dark');
+    document.documentElement.setAttribute('data-theme', 'dark');
     document.querySelector('.theme-toggle').innerHTML = '<i class="fas fa-sun"></i>';
+  } else {
+    document.body.classList.remove('dark');
+    document.documentElement.setAttribute('data-theme', 'light');
+    document.querySelector('.theme-toggle').innerHTML = '<i class="fas fa-moon"></i>';
   }
 
   // Open all dropdowns by default
@@ -101,6 +106,7 @@ const themeToggle = document.querySelector('.theme-toggle');
 themeToggle.addEventListener('click', () => {
   document.body.classList.toggle('dark');
   const isDarkMode = document.body.classList.contains('dark');
+  document.documentElement.setAttribute('data-theme', isDarkMode ? 'dark' : 'light');
   themeToggle.innerHTML = isDarkMode 
     ? '<i class="fas fa-sun"></i>' 
     : '<i class="fas fa-moon"></i>';

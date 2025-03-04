@@ -8,7 +8,7 @@
 
 /* CSS Variables */
 :root {
-  --primary: #120604;
+  --primary: #3b82f6;
   --secondary: #1e2a44;
   --bg-light: #f4f7fa;
   --bg-dark: #1f2937;
@@ -19,17 +19,33 @@
   --shadow-md: 4px 0 20px rgba(0, 0, 0, 0.3);
 }
 
+:root[data-theme="light"] {
+  --text: #2b2803;
+  --background: #ffffff; /* Updated to white */
+  --primary: #8a850a;
+  --secondary: #71f4d3;
+  --accent: #1087d1;
+}
+
+:root[data-theme="dark"] {
+  --text: #fcf9d4;
+  --background: #252303;
+  --primary: #f5f076;
+  --secondary: #0b906f;
+  --accent: #30a7ef;
+}
+
 /* Body Styles */
 body {
-  background: var(--bg-light);
-  color: var(--text-light);
+  background: var(--background);
+  color: var(--text);
   line-height: 1.6;
   transition: background var(--transition-speed), color var(--transition-speed);
 }
 
 body.dark {
-  background: var(--bg-dark);
-  color: var(--text-dark);
+  background: var(--background);
+  color: var(--text);
 }
 
 /* Sidebar (Drawer) */
@@ -101,7 +117,7 @@ body.dark {
 .sidebar a:hover,
 .sidebar h3:hover {
   background: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  color: var(--text);
   padding-left: 1.5625rem; /* 25px */
 }
 
@@ -281,16 +297,16 @@ body.dark .code-snippet {
 footer {
   text-align: center;
   padding: 1.25rem; /* 20px */
-  background: #fff;
-  color: #666;
+  background: var(--background);
+  color: var(--text);
   font-size: 0.875rem; /* 14px */
   border-top: 1px solid #e5e7eb;
   width: 100%;
 }
 
 body.dark footer {
-  background: #374151;
-  color: #d1d5db;
+  background: var(--background);
+  color: var(--text);
 }
 
 /* Responsive Design */
@@ -313,12 +329,6 @@ body.dark footer {
 
   .openbtn {
     display: flex;
-  }
-}
-
-@media (min-width: 769px) {
-  .openbtn {
-    display: none;
   }
 }
 
@@ -347,4 +357,13 @@ body.dark h3 {
 ul {
   margin-left: 1.25rem; /* 20px */
   list-style-type: disc;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
