@@ -1,4 +1,8 @@
-/* Reset and Base Styles */
+/* ==========================================================================
+   1. Reset and Base Styles
+   ========================================================================== */
+
+/* Box-sizing and Font Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,36 +10,45 @@
   font-family: 'Inter', sans-serif;
 }
 
-/* CSS Variables */
+/* ==========================================================================
+   2. CSS Variables: Theme Configuration
+   ========================================================================== */
+
+/* Root Variables: Default Theme */
 :root {
-  --primary: #3b82f6;
-  --secondary: #1e2a44;
-  --bg-light: #f4f7fa;
-  --bg-dark: #1f2937;
-  --text-light: #1f2937; /* Darkened for better contrast */
-  --text-dark: #e5e7eb;
-  --transition-speed: 0.3s;
-  --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.2);
-  --shadow-md: 4px 0 20px rgba(0, 0, 0, 0.3);
+  --primary: #3b82f6; /* Primary color for interactive elements */
+  --secondary: #1e2a44; /* Secondary color for headings and accents */
+  --bg-light: #f4f7fa; /* Light background color */
+  --bg-dark: #1f2937; /* Dark background color */
+  --text-light: #1f2937; /* Light text color */
+  --text-dark: #e5e7eb; /* Dark text color */
+  --transition-speed: 0.3s; /* Transition speed for animations */
+  --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.2); /* Small shadow */
+  --shadow-md: 4px 0 20px rgba(0, 0, 0, 0.3); /* Medium shadow */
 }
 
+/* Light Theme Variables */
 :root[data-theme="light"] {
-  --text: #2b2803;
-  --background: #ffffff; /* Updated to white */
-  --primary: #8a850a;
-  --secondary: #71f4d3;
-  --accent: #1087d1;
+  --text: #2b2803; /* Text color for light theme */
+  --background: #ffffff; /* Background color for light theme */
+  --primary: #8a850a; /* Primary color for light theme */
+  --secondary: #71f4d3; /* Secondary color for light theme */
+  --accent: #1087d1; /* Accent color for light theme */
 }
 
+/* Dark Theme Variables */
 :root[data-theme="dark"] {
-  --text: #fcf9d4;
-  --background: #252303;
-  --primary: #f5f076;
-  --secondary: #0b906f;
-  --accent: #30a7ef;
+  --text: #fcf9d4; /* Text color for dark theme */
+  --background: #131418; /* Background color for dark theme */
+  --primary: #f5f076; /* Primary color for dark theme */
+  --secondary: #0b906f; /* Secondary color for dark theme */
+  --accent: #30a7ef; /* Accent color for dark theme */
 }
 
-/* Body Styles */
+/* ==========================================================================
+   3. General Body Styles
+   ========================================================================== */
+
 body {
   background: var(--background);
   color: var(--text);
@@ -43,19 +56,17 @@ body {
   transition: background var(--transition-speed), color var(--transition-speed);
 }
 
-body.dark {
-  background: var(--background);
-  color: var(--text);
-}
+/* ==========================================================================
+   4. Sidebar (Drawer) Styles
+   ========================================================================== */
 
-/* Sidebar (Drawer) */
 .sidebar {
   height: 100%;
   width: 0;
   position: fixed;
   top: 0;
   left: 0;
-  background: linear-gradient(135deg, var(--secondary), #2b3a67);
+  background: #131418; /* Consistent sidebar color */
   overflow-y: auto;
   transition: width var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
   padding-top: 1.25rem; /* 20px */
@@ -68,6 +79,7 @@ body.dark {
   width: 17.5rem; /* 280px */
 }
 
+/* Sidebar Header */
 .sidebar-header {
   padding: 1.25rem; /* 20px */
   text-align: center;
@@ -77,6 +89,7 @@ body.dark {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Sidebar Search */
 .sidebar-search {
   padding: 0.9375rem 1.25rem; /* 15px 20px */
 }
@@ -97,6 +110,7 @@ body.dark {
   outline: 2px solid var(--primary); /* Accessibility */
 }
 
+/* Sidebar Links */
 .sidebar a,
 .sidebar h3 {
   padding: 0.875rem 1.25rem; /* 14px 20px */
@@ -121,6 +135,7 @@ body.dark {
   padding-left: 1.5625rem; /* 25px */
 }
 
+/* Sidebar Close Button */
 .sidebar .closebtn {
   position: absolute;
   top: 0.625rem; /* 10px */
@@ -137,6 +152,7 @@ body.dark {
   color: var(--primary);
 }
 
+/* Dropdown Container */
 .dropdown-container {
   max-height: 0;
   overflow: hidden;
@@ -150,6 +166,7 @@ body.dark {
   max-height: 31.25rem; /* 500px */
 }
 
+/* Dropdown Indicator */
 .dropdown-indicator {
   margin-left: auto;
   transition: transform var(--transition-speed) ease;
@@ -159,13 +176,17 @@ body.dark {
   transform: rotate(180deg);
 }
 
+/* Horizontal Rule */
 hr {
   border: none;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   margin: 0.9375rem 1.25rem; /* 15px 20px */
 }
 
-/* Main Content */
+/* ==========================================================================
+   5. Main Content Styles
+   ========================================================================== */
+
 #main {
   margin-left: 0;
   transition: margin-left var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
@@ -179,13 +200,14 @@ hr {
   margin-left: 17.5rem; /* 280px */
 }
 
+/* Open Button */
 .openbtn {
   display: flex;
   font-size: 1.5rem; /* 24px */
   width: 2.5rem; /* 40px */
   height: 2.5rem; /* 40px */
   background: var(--primary);
-  color: #fff;
+  color: #000; /* Black for both light and dark modes */
   border: none;
   border-radius: 0.3125rem; /* 5px */
   cursor: pointer;
@@ -207,6 +229,7 @@ hr {
   content: "☰";
 }
 
+/* Header Actions */
 .header-actions {
   display: flex;
   gap: 0.9375rem; /* 15px */
@@ -216,14 +239,18 @@ hr {
   z-index: 1001;
 }
 
+/* Header */
 header {
   display: none;
+  color: #000; /* Black in light mode */
 }
 
 body.dark header {
   background: #374151;
+  color: #fff; /* White in dark mode */
 }
 
+/* Container */
 .container {
   max-width: 75rem; /* 1200px */
   margin: 0 auto;
@@ -233,16 +260,19 @@ body.dark header {
   align-items: flex-start;
 }
 
+/* Branding */
 #branding h1 {
   font-size: 1.75rem; /* 28px */
   color: var(--secondary);
 }
 
+/* Highlight */
 .highlight {
   color: var(--primary);
   font-weight: 600;
 }
 
+/* Theme Toggle and Home Button */
 .theme-toggle,
 .home-btn {
   background: none;
@@ -268,6 +298,7 @@ body.dark .home-btn {
   outline: 2px solid var(--primary); /* Accessibility */
 }
 
+/* Main Content Section */
 #main-content {
   padding: 2.5rem 0; /* 40px 0 */
   width: 100%;
@@ -276,9 +307,10 @@ body.dark .home-btn {
 #main-content h2 {
   font-size: 2rem; /* 32px */
   margin-bottom: 1.25rem; /* 20px */
-  color: var(--secondary);
+  color: var(--text); /* Use text color variable */
 }
 
+/* Code Snippet */
 .code-snippet {
   background: #f8fafc;
   padding: 0.9375rem; /* 15px */
@@ -294,6 +326,7 @@ body.dark .code-snippet {
   color: #e5e7eb;
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 1.25rem; /* 20px */
@@ -309,7 +342,10 @@ body.dark footer {
   color: var(--text);
 }
 
-/* Responsive Design */
+/* ==========================================================================
+   6. Responsive Design
+   ========================================================================== */
+
 @media (max-width: 768px) {
   .sidebar {
     width: 0;
@@ -332,13 +368,16 @@ body.dark footer {
   }
 }
 
-/* Typography */
+/* ==========================================================================
+   7. Typography
+   ========================================================================== */
+
 h2 {
-  color: var(--text-light);
+  color: var(--text); /* Use text color variable */
 }
 
 body.dark h2 {
-  color: var(--text-dark);
+  color: var(--text); /* Use text color variable */
 }
 
 p {
